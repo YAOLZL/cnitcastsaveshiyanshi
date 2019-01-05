@@ -4,103 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/iv_head"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_launcher_background"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="3dp"
-        tools:ignore="MissingConstraints" />
-
-    <LinearLayout
-        android:id="@+id/la"
-
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/Tv_coures_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/iv_head"
-        android:layout_margin="10dp"
-        android:background="#ffffff"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="67dp"
-        tools:ignore="MissingConstraints">
+        android:layout_marginTop="40dp"
+        android:text="实验室管理"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RelativeLayout
-            android:id="@+id/rl_username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+    <EditText
+        android:id="@+id/edtTxt_course_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="208dp"
+        android:layout_marginLeft="208dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="姓名："
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tv_coures_title" />
 
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="账号" />
+    <EditText
+        android:id="@+id/edtTxt_course_phone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:ems="10"
+        android:hint="次数："
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_course" />
 
-            <EditText
-                android:id="@+id/et_number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+    <TextView
+        android:id="@+id/tvshow"
+        android:layout_width="589dp"
+        android:layout_height="342dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
 
-                android:layount_toRightOf="@id/tv_name"
-                android:background="@null"
-                />
-
-        </RelativeLayout>
-
-        <view
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#E6E6E6" />
-
-        <RelativeLayout
-            android:id="@+id/rl_userpsw"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp">
-
-            <TextView
-                android:id="@+id/tv_psw"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="密码" />
-
-            <EditText
-                android:id="@+id/et_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@+id/tv_psw"
-                android:background="@null"
-                android:inputType="numberPassword" />
-
-
-        </RelativeLayout>
-    </LinearLayout>
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tv_coures_title"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
+        android:id="@+id/btn_insert"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layount"
-        android:layout_centerHorizontal="true"
-        android:background="#3C8DC4"
-        android:layount_marginRight="10dp"
-        android:text="登录"
-        android:textColor="#ffffff"
+        android:layout_marginTop="48dp"
+        android:text="添加"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_query"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxt_course_phone" />
 
+    <Button
+        android:id="@+id/btn_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="查询"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_delete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_insert"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxt_course_phone" />
 
-        tools:ignore="MissingConstraints,UnknownId"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="180dp" />
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="删除"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_query"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxt_course_phone"
+        tools:text="删除" />
 
+    <EditText
+        android:id="@+id/edt_course"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:ems="10"
+        android:hint="编号："
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxt_course_name" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:text="姓名："
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtTxt_course_name"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="实验室编号："
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用次数："
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtTxt_course_phone"
+        app:layout_constraintEnd_toEndOf="@+id/textView3" />
 </android.support.constraint.ConstraintLayout>
