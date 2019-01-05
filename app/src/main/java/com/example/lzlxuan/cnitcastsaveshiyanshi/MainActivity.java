@@ -66,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(null);
                 while (iterator.hasNext()){
                     Student student=iterator.next();
-                    textView.append("姓名:"+student.getName()+",");
-                    textView.append("活动名称:"+student.getScore()+",");
-                    textView.append("素拓分数:"+String.valueOf(student.getPhone()));
+                    textView.append("编号:"+student.getName()+",");
+                    textView.append("实验室名称:"+student.getScore()+",");
+                    textView.append("使用次数:"+String.valueOf(student.getPhone()));
                 }
             }
         });
