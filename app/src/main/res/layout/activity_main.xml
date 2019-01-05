@@ -120,7 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
         android:layout_marginLeft="124dp"
-        android:text="姓名："
+        android:text="编号："
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/edtTxt_course_name"
         app:layout_constraintStart_toStartOf="parent" />
